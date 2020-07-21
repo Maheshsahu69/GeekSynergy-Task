@@ -1,0 +1,21 @@
+.heading{
+    font-size: 15px;
+    text-align: center;
+    background-color: #696969;
+    color: white;
+}
+
+.outer-div{
+    margin: 40px;
+}
+.title-text{
+    font-size: 20px;
+    font-weight: bold;
+    margin-right: 20px;
+   
+}
+.dropdownProfession{
+    width:25%;
+}
+
+

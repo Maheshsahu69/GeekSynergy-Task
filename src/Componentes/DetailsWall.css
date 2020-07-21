@@ -1,0 +1,21 @@
+.heading{
+    font-size: 15px !important;
+    background-color: #696969;
+    color: white;
+}
+.outer-div-details-wall{
+    margin: 40px;
+}
+.div-col-3{
+    padding-left: 5px;
+}
+.div-col-1{
+    padding-right: 5px;
+}
+.div-col-2{
+    padding-right: 5px;
+}
+.iconUp{
+    size: 20px !important;
+}
+

@@ -1,0 +1,9 @@
+.outer-div{
+    margin: 40px;
+}
+.heading{
+    font-size: 15px;
+    text-align: center;
+    background-color: #696969;
+    color: white;
+}
