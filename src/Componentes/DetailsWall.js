@@ -32,10 +32,16 @@ constructor(props){
     this.state={
         results:[],
         showCode:false,  
+        open:false
     };
     this.fetchAPIdata();
     
 };
+ handleClick = () => {
+
+    this.setState({open:!this.state.open})
+
+  };
 componentDidMount(){
     this.fetchAPIdata();
 }
@@ -49,6 +55,7 @@ componentDidMount(){
         }).then(res => {
             return res.json();
         }).then((data) => {
+            console.log("data", data.result[0]);
             this.setState({showCode:true});
             for(var i=0; i<data.result.length; i++){
                 genre.push(data.result[i].genre);
@@ -77,6 +84,22 @@ componentDidMount(){
                     </TableRow>
                     </TableHead>
                     <TableBody>
+                    <TableRow >
+                        <TableCell  colSpan={3} align="right"  >
+                        <Button color="primary" variant="outlined" onClick={this.handleClick}>Company Info</Button>
+                        <div className="company-info-style">
+                       { this.state.open && 
+                       <div >
+                        <div style={{textAlign:"left"}}> <span className="span-style">Company:</span> Geeksynergy Technologies Pvt Ltd</div>
+                        <div style={{textAlign:"left"}}>  <span className="span-style">Address:</span> Sanjayanagar, Bengaluru-56</div>
+                        <div style={{textAlign:"left"}}><span className="span-style">Phone:</span>XXXXXXXXX09</div>
+                       <div style={{textAlign:"left"}}> <span className="span-style">Email:</span> XXXXXX@gmail.com</div>
+                       </div>
+                      
+                       }
+                        </div> 
+                        </TableCell>
+                    </TableRow>
                        { this.state.showCode &&
                              genre.map((gen,index)=> {
                                 let dir= director.map(e=>{
@@ -107,7 +130,7 @@ componentDidMount(){
                                 
                                 return (
                                    
-                                    <TableRow key={index}> 
+                                    <TableRow key={index} > 
                                         <TableCell>
                                             <div className="div-col-1">
                                                 <div style={{padding:"5px"}}><ArrowDropUpIcon /></div>
@@ -139,6 +162,7 @@ componentDidMount(){
                         }
                     </TableBody>
                 </Table>
+   
             </div>
         );
     }

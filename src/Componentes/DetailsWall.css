@@ -19,3 +19,24 @@
     size: 20px !important;
 }
 
+.company-info-style{
+    
+    position:absolute;
+    right:2%;
+    margin-top: 2%; 
+    color:#696969;
+    font-size: 12px;
+    
+    
+
+   
+}
+
+.span-style{
+    font-weight: bold;
+    color:#696969;
+    font-size: 13px;
+  
+
+    
+}
